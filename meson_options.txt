@@ -1,0 +1,25 @@
+# Copyright (C) 2020 RidgeRun, LLC (http://www.ridgerun.com)
+
+option('incdir', type : 'string', value : 'C:/gstreamer_plugins/include', yield : true, description : 'Header file installation path')
+# Feature options
+option('enable-tests', type : 'feature', value : 'enabled', yield : true, description : 'Build tests')
+option('enable-examples', type : 'feature', value : 'enabled', yield : true, description : 'Build examples')
+option('enable-docs', type : 'feature', value : 'enabled', yield : true, description : 'Build documentation with Doxygen')
+
+# Enable support for different backends
+option('enable-coral', type : 'boolean', value: false,
+       description : 'Enable Coral from Google backend support. This backend needs to have the TFLite backend enabled.')
+option('enable-tensorflow', type : 'boolean', value: false,
+       description : 'Enable Tensorflow backend support')
+option('enable-tflite', type : 'boolean', value: false,
+       description : 'Enable Tensorflow Lite backend support')
+option('enable-tensorrt', type : 'boolean', value: true,
+       description : 'Enable TensorRT backend support')
+option('enable-onnxrt', type : 'boolean', value: false,
+       description : 'Enable ONNX Runtime backend support')
+option('enable-onnxrt-acl', type : 'boolean', value: false,
+       description : 'Enable ONNX Runtime backend with ACL execution provider support')
+option('enable-onnxrt-openvino', type : 'boolean', value: false,
+       description : 'Enable ONNX Runtime backend with OpenVINO execution provider support')
+option('enable-nnapi', type : 'boolean', value : false,
+       description : 'Enable NNAPI delegate for NPU inference execution support')

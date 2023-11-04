@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "gstinferencepreprocess.h": "c",
+        "gstinferenceprediction.h": "c",
+        "gstvideoinference.h": "c",
+        "gstinferencemeta.h": "c",
+        "memory": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "map": "cpp",
+        "forward_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp"
+    }
+}
