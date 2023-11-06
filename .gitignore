@@ -5,6 +5,7 @@
 *ignore.c
 *ignore.h
 *.log
+*.wts
 
 # Meson
 /build
