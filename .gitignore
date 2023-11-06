@@ -1,0 +1,11 @@
+# files
+*.ipch
+*.mp4
+*.avi
+*ignore.c
+*ignore.h
+*.log
+*.wts
+
+# Meson
+/build
