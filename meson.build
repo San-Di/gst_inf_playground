@@ -153,6 +153,22 @@ trt_dep = declare_dependency(
 lib_trt_dep = [trt_dep, cuda_dep, cudart_dep, cudnn_dep]
 cdata.set('HAVE_TENSORRT', true)
 
+#Pintel_Backend
+# backend_inc_dir = join_paths('C:/gstreamer_plugins/include/gstreamer-1.0', 'MyLibrary')
+# backend_lib_dir = join_paths('C:/gstreamer_plugins/lib','gstreamer-1.0')
+# backend_lib = cpp.find_library('MyLibrary', dirs:backend_lib_dir, required: true)
+# backend_dep = declare_dependency(
+#   dependencies: backend_lib,
+#   include_directories: include_directories(backend_inc_dir)
+# )
+
+backend_inc_dir = join_paths('D:/workspace/gstreamer/MyLibrary', 'MyLibrary')
+backend_lib_dir = join_paths('D:/workspace/gstreamer/MyLibrary/x64','Debug')
+backend_lib = cpp.find_library('MyLibrary', dirs:backend_lib_dir, required: true)
+backend_dep = declare_dependency(
+  dependencies: backend_lib,
+  include_directories: include_directories(backend_inc_dir)
+)
 
 # Define header directories
 configinc = include_directories('.')
@@ -192,4 +208,4 @@ if meson.version().version_compare('>= 0.54')
   endforeach
   summary({'Plugins':plugin_names}, list_sep: ', ')
 endif
-subdir('temp')
+subdir('tensorrt')

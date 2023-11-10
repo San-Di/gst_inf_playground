@@ -47,6 +47,7 @@
 #define __GST_INF_PINTEL_H__
 
 #include <gst/gst.h>
+#include "inf_pintel_backend.h"
 
 G_BEGIN_DECLS
 
@@ -72,6 +73,9 @@ struct _GstInfPintel
   GstPad *sinkpad, *srcpad;
 
   gboolean silent;
+
+  std::shared_ptr<pintel_backend_api> api;
+
 };
 
 struct _GstInfPintelClass 

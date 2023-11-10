@@ -7,7 +7,7 @@ trtphrd_headers = [
 ]
 
 
-# install_headers(trtphrd_headers, subdir : inc_install_dir + '/pinference/tensorrt')
+install_headers(trtphrd_headers, subdir : inc_install_dir + 'infpintel')
 # dependencies : [gst_dep, gstvideo_dep, lib_trt_dep, opencv_dep, json_dep, glib_dep, gmodule_dep],
  
 gstmypintelinf = library('gstinfpintel',
@@ -16,7 +16,7 @@ gstmypintelinf = library('gstinfpintel',
 	include_directories : [configinc, '.'],
 	install : true,
 	install_dir : lib_install_dir,
-	dependencies : [gst_dep, gstvideo_dep, lib_trt_dep, opencv_dep, json_dep, glib_dep, gmodule_dep],
+	dependencies : [gst_dep, gstvideo_dep, lib_trt_dep, opencv_dep, json_dep, glib_dep, gmodule_dep, backend_dep],
 )
 
 
